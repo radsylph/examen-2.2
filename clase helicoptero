@@ -1,0 +1,267 @@
+package examen_1_de_poo;
+
+public class Helicoptero extends VehiculoAereo {
+	
+	private int helices;
+	private int rotor;
+	private int potencia_rotor;
+	private double precio;
+	
+
+	private boolean flotadores;
+	private boolean doble_helice;
+	private boolean doble_cabina;
+	private boolean rotor_extra;
+	
+	private String color;
+	
+public Helicoptero ()
+{
+	super();
+	capacidad_carga = 350;//kg
+	capacidad_pasajeros = 4;
+	peso_chasis = 542;
+	altura_maxima = 2550; //m
+	distancia_maxima = 1289;
+	velocidad_maxima = 302;
+	longitud_nave = 9.23;
+	altura_nave = 2.83;
+	
+	peso_total = 400;
+	rotor = 1;
+	potencia_rotor = 150; //HP
+}
+//getters
+public String dimehelices1() {
+	if (doble_helice)
+	{
+		helices = 4; 
+	}
+	else
+	{
+		helices = 2;
+	}
+	System.out.println("\nEl helicoptero tiene "+helices +" helices");
+	return"";
+}
+
+public String dimeprecio4()
+{
+	precio= capacidad_carga + capacidad_pasajeros + peso_total * 2.5;
+	if (flotadores)
+	{
+		precio=precio+9500;
+	}
+	if (doble_helice)
+	{
+		precio=precio+10000;
+	}
+	if (doble_cabina)
+	{
+		precio=precio+25000;
+	}
+	if (rotor_extra)
+	{
+		precio=precio+35000;
+	}
+	System.out.println("\nEl precio del helicoptero es de " +precio + " mil dolares");
+	return "";
+}
+
+public String dimepeso4 ()
+{
+	if (doble_cabina)
+	{
+		peso_total=peso_total + 50;
+		System.out.println("\nEl peso de el helicoptero es de " +peso_total +" kg");
+	}
+	else
+	{
+		System.out.println("\nEl peso de el helicoptero es de " +peso_total +" kg");
+	}
+	
+	return "";
+}
+
+public String dimecolor4()
+{
+	System.out.println("\nEl color de el helicoptero es :"  +color);
+
+	return "";
+}
+
+public String dimelongitud4()
+{
+	System.out.println("\nLa longitud de el helicoptero es :" +longitud_nave +" metros");
+	return"";
+}
+
+public String dimealtura4()
+{
+	System.out.println("\nLa altura de el helicoptero es :" +altura_nave +" metros");
+	return"";
+}
+
+public String dimevelox3()
+{
+	System.out.println("\nLa velocidad maxima de el helicoptero es de : " +velocidad_maxima +" kilometros por hora");
+	return "";
+}
+
+public String dimealtu3()
+{
+	System.out.println("\nLa altura maxima a la que puede llegar el helicoptero es de " +altura_maxima +" metros");
+	return "";
+}
+
+public String dimedistancia3()
+{
+	System.out.println("\nLa distancia maxima que puede recorrer el helicoptero es de " +distancia_maxima +" kilometros");
+	return "";
+}
+
+public String dimerotor()
+{
+	if(rotor_extra)
+	{
+		System.out.println("\nEl helicoptero tiene " +rotor*2 +" rotores y su potencia es de " +potencia_rotor +" cada uno");	
+	}
+	else 
+	{
+		System.out.println("\nEl helicoptero tiene " +rotor +" rotor y su potencia es de " +potencia_rotor);	
+
+	}
+	return "";
+}
+
+public String dimepasajeros4()
+{	
+	if (doble_cabina)
+	{
+		capacidad_pasajeros=capacidad_pasajeros*2;
+		System.out.println("\nEl helicoptero tiene capacidad maxima para " +capacidad_pasajeros+ " pasajeros");
+	}
+	else 
+	{
+		System.out.println("\nEl helicoptero tiene capacidad maxima para " +capacidad_pasajeros+ " pasajeros");
+	}
+	
+	return "";
+}
+public String dimecarga4()
+{
+	System.out.println("\nLa capacidad de carga maxima de el helicoptero es de " +capacidad_carga+ " kg");
+	return"";
+}
+
+public String dimedoblec1()
+{
+	if (doble_cabina)
+	{
+	System.out.println("\nEl helicoptero tiene doble cabina");
+	}
+	else 
+	{
+		System.out.println("\nEl helicoptero no tiene doble cabina");
+	}
+	return "";
+}
+
+public String dimeflotadores1()
+{
+	if (flotadores)
+	{
+		System.out.println("\nEl helicoptero tiene flotadores para aterrizar en el agua");
+	}
+	else 
+	{
+		System.out.println("\nEl helicoptero no tiene flotadores para aterrizar en el agua");
+	}
+	return "";
+}
+
+public String dimedobleh1()
+{
+	if (doble_helice) 
+	{
+		System.out.println("\nEl helicoptero tiene doble helice");
+	}
+	else
+	{
+		System.out.println("\nEl helicoptero no tiene doble helice");
+	}
+	return "";
+}
+
+public String dimerotorx()
+{
+	if(rotor_extra)
+	{
+		System.out.println("\nEl helicoptero tiene doble rotor");
+	}
+	else 
+	{
+		System.out.println("\nEl helicoptero no tiene doble rotor");
+	}
+	return "";
+}
+
+//setters
+
+public void ponercolor4(String colord)
+{
+	color=colord;
+}
+
+public void establecerdobleh1(String doble_helice)
+{
+	if (doble_helice.equalsIgnoreCase("si"))
+	{
+		this.doble_helice = true;
+	}
+	else
+	{
+		this.doble_helice = false;
+		
+	}
+}
+
+public void establecerflota1(String flotadores)
+{
+	if (flotadores.equalsIgnoreCase("si"))
+	{
+		this.flotadores = true;
+	}
+	else 
+	{
+		this.flotadores = false;
+	}
+	
+	
+}
+
+public void establecerdoblec(String doble_cabina)
+{
+	if (doble_cabina.equalsIgnoreCase("si"))
+	{
+		this.doble_cabina = true;
+	}
+	else 
+	{
+		this.doble_cabina = false;
+	}
+}
+
+public void establecerdr(String rotor_extra)
+{
+	if (rotor_extra.equalsIgnoreCase("si"))
+	{
+		this.rotor_extra = true;
+	}
+	else 
+	{
+		this.rotor_extra = false;
+	}
+}
+
+}
