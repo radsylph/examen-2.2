@@ -1,0 +1,262 @@
+package examen_1_de_poo;
+
+
+public class AvionCarga extends VehiculoAereo {
+	private int motor;
+	private int potencia_motor;
+	private double precio;
+	
+	private String color;
+	
+	private boolean refrigeracion;
+	private boolean estabilizador;
+	private boolean tripulantes;
+	private boolean gps;
+	private boolean escolta;
+	public AvionCarga()
+	{
+		super();
+		capacidad_carga = 435; //toneladas
+		capacidad_pasajeros = 12;
+		peso_chasis =129; //toneladas
+		altura_maxima = 10327; //m
+		distancia_maxima = 13700; //km
+		velocidad_maxima = 896; //km/h
+		
+		longitud_nave = 63.69; //m
+		altura_nave =  16.91; //m
+		envergadura = 60.3; //m  
+		
+		peso_total = 564; //toneladas
+		motor = 4;
+		potencia_motor = 77500; //HW
+		
+	}
+	//getters 
+	public String dimeprecio3()
+	{
+		precio=capacidad_carga + capacidad_pasajeros + peso_total * 3;
+		if (estabilizador)
+		{
+			precio=precio+120000;
+		}
+		if (refrigeracion)
+		{
+			precio=precio+2000000;
+		}
+		if (tripulantes)
+		{
+			precio=precio+3500000;
+		}
+		if(gps)
+		{
+			precio=precio+185000;
+		}
+		if (escolta)
+		{
+			precio=precio+500000;
+		}
+		System.out.println("\nEl precio de el avion es de " +precio +" millones de dolares");
+		return"";
+	}
+	
+	public String dimemotor3()
+	{
+		System.out.println("\n El avion tiene " +motor+ " motores y su potencia es de " +potencia_motor +" cada uno");
+		return"";
+	}
+	
+	public String dimepeso3()
+	{
+		System.out.println("\nEl peso de el avion es de " +peso_total +"toneladas");
+		return"";
+	}
+	
+	public String dimecolor3()
+	{
+		System.out.println("\nEl color del avion es :"  +color);
+	
+		return "";
+	}
+	
+	public String dimelongitud3() 
+	{
+		System.out.println("\nLa longitud del avion es :" +longitud_nave +" metros");
+		return"";
+	}
+	
+	public String dimealtura3()
+	{
+		System.out.println("\nLa altura del avion es :" +altura_nave + " metros");
+		return"";
+	}
+	
+	public String dimevelox3()
+	{
+		System.out.println("\nLa velocidad maxima del avion es de : " +velocidad_maxima +" kilometros por hora");
+		return "";
+	}
+	
+	public String dimealtu3()
+	{
+		System.out.println("\nLa altura maxima a la que puede llegar el avion es de " +altura_maxima +" metros");
+		return "";
+	}
+	
+	public String dimedistancia3()
+	{
+		System.out.println("\nLa distancia maxima que puede recorrer el avion es de " +distancia_maxima +" kilometros");
+		return "";
+	}
+	
+	public String dimemotores3()
+	{
+		System.out.println("\nEl avion tiene " +motor+ " motores" + " y su potencia es de " +potencia_motor + " caballos de fuerza por cada motor");
+		return"";
+	}
+	
+	public String dimepasajeros3()
+	{
+		System.out.println("\nEl avion tiene capacidad maxima para " +capacidad_pasajeros+ " pasajeros");
+		return "";
+	}
+	
+	public String dimecarga3()
+	{
+		System.out.println("\nLa capacidad de carga maxima del avion es de " +capacidad_carga+ " toneladas");
+		return"";
+	}
+	
+
+	public String dimerefrigeracion()
+	{
+		if (refrigeracion)
+		{
+			System.out.println("\nEl avion cuenta con refrigeracion");
+		}
+		else 
+		{
+			System.out.println("\nEl avion no cuenta con refrigeracion");
+		}
+		return "";
+	}
+	
+	public String dimeestabilizador()
+	{
+		if (estabilizador)
+		{
+			System.out.println("\nEl avion tiene estabilizador para la carga");
+		}
+		else 
+		{
+			System.out.println("\nEl avion no tiene estabilizador para la carga");
+		}
+		return "";
+	}
+
+	public String dimegps()
+	{
+		if (gps)	
+		{
+			System.out.println("\nEl avion tiene gps global");
+		}
+		else
+		{
+			System.out.println("\nEl avion no tiene gps global");
+		}
+		return "";
+	}
+	
+	public String dimeescol()
+	{
+		if (escolta)
+		{
+			System.out.println("\nEl avion cuenta con escoltas");
+		}
+		else 
+		{
+			System.out.println("\nEl avion no cuenta con escolta");
+		}
+		return "";
+	}
+	public String dimetripulantes()
+	{
+		if (tripulantes)
+		{
+			capacidad_pasajeros = capacidad_pasajeros * 3;
+			System.out.println("\nEl avion tiene capacidad para tener mas tripulantes");
+		}
+		else 
+		{
+			System.out.println("\nEl avion no tiene capacidad para tener mas tripulantes");
+		}
+		return "";
+	}
+	//setters 
+	public void ponercolor2 (String colorc)
+	{
+		color = colorc;
+	}
+	
+	public void establecerrefri (String refrigeracion)
+	{
+		if(refrigeracion.equalsIgnoreCase("si"))
+		{
+			this.refrigeracion = true;
+		}
+		else 
+		{
+			this.refrigeracion = false;
+		}
+	}
+	
+	public void estableceresta (String estabilizador)
+	{
+		if(estabilizador.equalsIgnoreCase("si")) 
+		{
+			this.estabilizador = true;
+		}
+		else 
+		{
+			this.estabilizador = false;
+		}
+	}
+	
+	public void establecergp(String gps)
+	{
+		if(gps.equalsIgnoreCase("si"))
+		{
+			this.gps = true;
+	    }
+		else
+		{
+			this.gps = false;
+		}
+	}
+	
+	public void establecerescol(String escolta)
+	{
+		if(escolta.equalsIgnoreCase("si"))
+		{
+			this.escolta = true;
+		}
+		else
+		{
+			this.escolta = false;
+		}
+	}
+	
+	public void establecertripu (String tripulantes)
+	{
+	if (tripulantes.equalsIgnoreCase("si"))
+	{
+		this.tripulantes = true;
+	}
+	else 
+	{
+		this.tripulantes = false;
+	}
+	
+	}
+	
+}
