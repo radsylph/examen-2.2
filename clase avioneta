@@ -1,0 +1,258 @@
+package examen_1_de_poo;
+
+public class Avioneta extends VehiculoAereo {
+	
+	private int helices;
+	private int motor;
+	private int potencia_motor;
+	private double precio;
+
+	
+	private boolean flotadores;
+	private boolean doble_helice;
+	private boolean radio;
+	private boolean doble_cabina;
+	
+	
+	private String color;
+	
+
+public Avioneta()
+{
+	super();
+	capacidad_carga= 1412; //kg
+	capacidad_pasajeros= 4;// personas contando el piloto
+	peso_chasis= 767; //kg
+	altura_maxima= 4100; //m
+	distancia_maxima= 1289; //km
+	velocidad_maxima= 302; //km/h
+	longitud_nave= 8.28; //m
+	altura_nave= 2.83; //m
+	envergadura = 11; //m
+	
+	peso_total=645; //kg
+	motor = 1;
+	potencia_motor= 162; //caballos de fuerza
+}
+//getters
+public String dimehelices() {
+	if (doble_helice)
+	{
+		helices = 4; 
+	}
+	else
+	{
+		helices = 2;
+	}
+	System.out.println("\nLa avioneta tiene "+helices +" helices");
+	return"";
+}
+public String dimeprecio2() {
+
+	precio=capacidad_carga + capacidad_pasajeros + peso_total * 1.5;
+	if (radio)
+	{
+		precio=precio+5000;
+	}
+	if (flotadores)
+	{
+		precio=precio+8500;
+	}
+	if(doble_cabina)
+	{
+		precio=precio+12000;
+	}
+	if (doble_helice)
+	{
+		precio=precio+8000;
+	}
+	System.out.println("\nEl precio de la avioneta es de " +precio + " mil dolares");
+	return"";
+}
+
+public String dimepeso2()
+{
+	if (doble_cabina)
+	{
+		peso_total=peso_total+80;
+		System.out.println("\nEl peso de la avioneta es de " +peso_total +"kg");
+	}
+	else
+	{
+	System.out.println("\nEl peso de la avioneta es de " +peso_total +"kg");
+	}
+	return"";
+	}
+
+public String dimecolor2()
+{
+	System.out.println("\nEl color de la avioneta es :"  +color);
+
+	return "";
+}
+
+public String dimelongitud2() 
+{
+	System.out.println("\nLa longitud de la avioneta es :" +longitud_nave +" metros");
+	return"";
+}
+
+public String dimealtura2()
+{
+	System.out.println("\nLa altura de la avioneta es :" +altura_nave +" metros");
+	return"";
+}
+
+public String dimevelox1()
+{
+	System.out.println("\nLa velocidad maxima de la avioneta es de : " +velocidad_maxima +" kilometros por hora");
+	return "";
+}
+	
+public String dimealtu1()
+{
+	System.out.println("\nLa altura maxima a la que puede llegar la avioneta es de " +altura_maxima +" metros");
+	return "";
+}
+
+public String dimedistancia1()
+{
+	System.out.println("\nLa distancia maxima que puede recorrer la avioneta es de " +distancia_maxima +" kilometros");
+	return "";
+}
+
+public String dimemotores2()
+{
+	System.out.println("\nLa avioneta tiene " +motor+ " motor" + " y su potencia es de " +potencia_motor + " caballos de fuerza");
+	return"";
+}
+
+public String dimepasajeros2()
+{	
+	if (doble_cabina)
+	{
+		capacidad_pasajeros=capacidad_pasajeros*2;
+		System.out.println("\nEl avion tiene capacidad maxima para " +capacidad_pasajeros+ " pasajeros");
+	}
+	else 
+	{
+		System.out.println("\nEl avion tiene capacidad maxima para " +capacidad_pasajeros+ " pasajeros");
+	}
+	
+	return "";
+}
+public String dimecarga2()
+{
+	System.out.println("\nLa capacidad de carga maxima de la avioneta es de " +capacidad_carga+ " kg");
+	return"";
+}
+
+public String dimedoblec()
+{
+	if (doble_cabina)
+	{
+	System.out.println("\nLa avioneta tiene doble cabina");
+	}
+	else 
+	{
+		System.out.println("\nLa avioneta no tiene doble cabina");
+	}
+	return "";
+}
+
+public String dimeradio()
+{
+	if (radio)
+	{
+		System.out.println("\nLa avioneta tiene radio satelital");
+	}
+	else 
+	{
+		System.out.println("\nLa avioneta no tiene radio satelital");
+	}
+	return "";
+}
+
+public String dimeflotadores()
+{
+	if (flotadores)
+	{
+		System.out.println("\nLa avioneta tiene flotadores para aterrizar en el agua");
+	}
+	else 
+	{
+		System.out.println("\nLa avionete no tiene flotadores para aterrizar en el agua");
+	}
+	return "";
+}
+
+public String dimedobleh()
+{
+	if (doble_helice) 
+	{
+		System.out.println("\nLa avioneta tiene doble helice");
+	}
+	else
+	{
+		System.out.println("\nLa avionete no tiene doble helice");
+	}
+	return "";
+}
+
+//setters
+
+public void ponercolor (String colorb)
+{
+	color=colorb;
+}
+
+public void establecerdobleh(String doble_helice)
+{
+	if (doble_helice.equalsIgnoreCase("si"))
+	{
+		this.doble_helice = true;
+	}
+	else
+	{
+		this.doble_helice = false;
+		
+	}
+}
+
+public void establecerradio(String radio)
+{
+	if (radio.equalsIgnoreCase("si"))
+	{
+		this.radio = true;
+	}
+	else 
+	{
+		this.radio = false;
+	}
+}
+	
+public void establecerflota(String flotadores)
+{
+	if (flotadores.equalsIgnoreCase("si"))
+	{
+		this.flotadores = true;
+	}
+	else 
+	{
+		this.flotadores = false;
+	}
+}
+
+public void establecerdoblec(String doble_cabina)
+{
+	if (doble_cabina.equalsIgnoreCase("si"))
+	{
+		this.doble_cabina = true;
+	}
+	else 
+	{
+		this.doble_cabina = false;
+	}
+}
+
+}
