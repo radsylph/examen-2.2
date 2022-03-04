@@ -1,0 +1,438 @@
+package examen_1_de_poo;
+
+public class AvionComercial extends VehiculoAereo{
+	
+
+	private int motor;
+	private int potencia_motor;
+	private double precio;
+	
+	
+	private String color;
+	
+	private boolean aire;
+	private boolean wifi;
+	private boolean primeraclase;
+	private boolean comidas;
+	
+	public AvionComercial() {
+		super();
+		capacidad_carga=333400;// kg
+		capacidad_pasajeros=325; //contando tripulacion
+		peso_chasis=162400; //kg
+		altura_maxima=10500; //m
+		distancia_maxima=14310;//km
+		velocidad_maxima= 945; //km/h
+		
+		
+		longitud_nave=70.66;//m
+		altura_nave=19.3;//m
+		envergadura=59.64;//m
+		
+		peso_total=183500; //kg
+		motor=4;
+		potencia_motor=66500; //lb
+	
+		
+		
+	}
+	
+	//getters
+	public String dimeprecio1()
+	{
+		precio=capacidad_carga + capacidad_pasajeros + peso_total * 2;
+		if (aire)
+		{
+			precio=precio+500000;
+		}
+		if (wifi)
+		{
+			precio=precio+150000;
+		}
+		if (comidas)
+		{
+			precio=precio+15000;
+		}
+		if (primeraclase)
+		{
+			precio=precio+1000000;
+		}
+		System.out.println("\nEl precio de el avion es de " +precio +" millones de dolares");
+		return"";
+	}
+	public String dimepeso1()
+	{
+		System.out.println("\nEl peso de el avion es de " +peso_total +"toneladas");
+		return"";
+	}
+	public String dimecolor1()
+	{
+		System.out.println("\nEl color del avion es :"  +color);
+	
+		return "";
+	}
+	public String dimelongitud1() 
+	{
+		System.out.println("\nLa longitud del avion es :" +longitud_nave +" metros");
+		return"";
+	}
+	public String dimealtura1()
+	{
+		System.out.println("\nLa altura del avion es :" +altura_nave + " metros");
+		return"";
+	}
+	public String dimevelox()
+	{
+		System.out.println("\nLa velocidad maxima del avion es de : " +velocidad_maxima +" kilometros por hora");
+		return "";
+	}
+	public String dimealtu()
+	{
+		System.out.println("\nLa altura maxima a la que puede llegar el avion es de " +altura_maxima +" metros");
+		return "";
+	}
+	public String dimedistancia()
+	{
+		System.out.println("\nLa distancia maxima que puede recorrer el avion es de " +distancia_maxima +" kilometros");
+		return "";
+	}
+	public String dimemotores1()
+	{
+		System.out.println("\nEl avion tiene " +motor+ " motores" + " y su potencia es de " +potencia_motor + " caballos de fuerza por cada motor");
+		return"";
+	}
+	public String dimepasajeros1()
+	{
+		System.out.println("\nEl avion tiene capacidad maxima para " +capacidad_pasajeros+ " pasajeros");
+		return "";
+	}
+	public String dimecarga1()
+	{
+		System.out.println("\nLa capacidad de carga maxima del avion es de " +capacidad_carga+ " kg");
+		return"";
+	}
+	
+	public String dimewifi()
+	{
+		if (wifi)
+		{
+			System.out.println("\nEl avion cuenta con wifi para los pasajeros");
+		}
+		else 
+		{
+			System.out.println("\nEl avion no cuenta con wifi para los pasajeros");
+		}
+		return "";
+	}
+	public String dimeprimeraclase()
+	{
+		if(primeraclase)
+		{
+			System.out.println("\nEl avion cuenta con primera clase");
+		}
+		else
+		{
+			System.out.println("\nEl avion no cuenta con primera clase");
+		}
+		return "";
+	}
+	public String dimecomidas()
+	{
+		if (comidas)
+		{
+			System.out.println("\nEl avion cuenta con comida incluida para los pasajeros");
+		}
+		else 
+		{
+			System.out.println("\nEl avion no cuenta con comida incluida para los pasajeros");
+		}
+		return "";
+	}
+	public String dimeaire()
+	{
+		if(aire)
+		{
+			System.out.println("\nEl avion tiene aire acondicionado");
+		}
+		else
+		{
+			System.out.println("\nEl avion no tiene aire acondicionado");
+		}
+		return "";
+	}
+	//setters
+	
+		public void ponercolor (String colora)
+		{
+			color=colora;
+		}
+		
+		public void estableceraire1(String aire)
+		{
+			if(aire.equalsIgnoreCase("si"))
+			{
+				this.aire = true;
+			}
+			else
+			{
+				this.aire = false;
+			}
+		}
+		
+		public void establecerprimeraclase(String primeraclase)
+		{
+			if(primeraclase.equalsIgnoreCase("si"))
+			{
+				this.primeraclase = true;
+			}
+			else 
+			{
+				this.primeraclase = false;
+			}
+		}
+		
+		public void establecerwifi(String wifi)
+		{
+			if(wifi.equalsIgnoreCase("si"))
+			{
+				this.wifi = true;
+			}
+			else 
+			{
+				this.wifi = false;
+			}package examen_1_de_poo;
+
+public class AvionComercial extends VehiculoAereo{
+	
+
+	private int motor;
+	private int potencia_motor;
+	private double precio;
+	
+	
+	private String color;
+	
+	private boolean aire;
+	private boolean wifi;
+	private boolean primeraclase;
+	private boolean comidas;
+	
+	public AvionComercial() {
+		super();
+		capacidad_carga=333400;// kg
+		capacidad_pasajeros=325; //contando tripulacion
+		peso_chasis=162400; //kg
+		altura_maxima=10500; //m
+		distancia_maxima=14310;//km
+		velocidad_maxima= 945; //km/h
+		
+		
+		longitud_nave=70.66;//m
+		altura_nave=19.3;//m
+		envergadura=59.64;//m
+		
+		peso_total=183500; //kg
+		motor=4;
+		potencia_motor=66500; //lb
+	
+		
+		
+	}
+	
+	//getters
+	public String dimeprecio1()
+	{
+		precio=capacidad_carga + capacidad_pasajeros + peso_total * 2;
+		if (aire)
+		{
+			precio=precio+500000;
+		}
+		if (wifi)
+		{
+			precio=precio+150000;
+		}
+		if (comidas)
+		{
+			precio=precio+15000;
+		}
+		if (primeraclase)
+		{
+			precio=precio+1000000;
+		}
+		System.out.println("\nEl precio de el avion es de " +precio +" millones de dolares");
+		return"";
+	}
+	public String dimepeso1()
+	{
+		System.out.println("\nEl peso de el avion es de " +peso_total +"toneladas");
+		return"";
+	}
+	public String dimecolor1()
+	{
+		System.out.println("\nEl color del avion es :"  +color);
+	
+		return "";
+	}
+	public String dimelongitud1() 
+	{
+		System.out.println("\nLa longitud del avion es :" +longitud_nave +" metros");
+		return"";
+	}
+	public String dimealtura1()
+	{
+		System.out.println("\nLa altura del avion es :" +altura_nave + " metros");
+		return"";
+	}
+	public String dimevelox()
+	{
+		System.out.println("\nLa velocidad maxima del avion es de : " +velocidad_maxima +" kilometros por hora");
+		return "";
+	}
+	public String dimealtu()
+	{
+		System.out.println("\nLa altura maxima a la que puede llegar el avion es de " +altura_maxima +" metros");
+		return "";
+	}
+	public String dimedistancia()
+	{
+		System.out.println("\nLa distancia maxima que puede recorrer el avion es de " +distancia_maxima +" kilometros");
+		return "";
+	}
+	public String dimemotores1()
+	{
+		System.out.println("\nEl avion tiene " +motor+ " motores" + " y su potencia es de " +potencia_motor + " caballos de fuerza por cada motor");
+		return"";
+	}
+	public String dimepasajeros1()
+	{
+		System.out.println("\nEl avion tiene capacidad maxima para " +capacidad_pasajeros+ " pasajeros");
+		return "";
+	}
+	public String dimecarga1()
+	{
+		System.out.println("\nLa capacidad de carga maxima del avion es de " +capacidad_carga+ " kg");
+		return"";
+	}
+	
+	public String dimewifi()
+	{
+		if (wifi)
+		{
+			System.out.println("\nEl avion cuenta con wifi para los pasajeros");
+		}
+		else 
+		{
+			System.out.println("\nEl avion no cuenta con wifi para los pasajeros");
+		}
+		return "";
+	}
+	public String dimeprimeraclase()
+	{
+		if(primeraclase)
+		{
+			System.out.println("\nEl avion cuenta con primera clase");
+		}
+		else
+		{
+			System.out.println("\nEl avion no cuenta con primera clase");
+		}
+		return "";
+	}
+	public String dimecomidas()
+	{
+		if (comidas)
+		{
+			System.out.println("\nEl avion cuenta con comida incluida para los pasajeros");
+		}
+		else 
+		{
+			System.out.println("\nEl avion no cuenta con comida incluida para los pasajeros");
+		}
+		return "";
+	}
+	public String dimeaire()
+	{
+		if(aire)
+		{
+			System.out.println("\nEl avion tiene aire acondicionado");
+		}
+		else
+		{
+			System.out.println("\nEl avion no tiene aire acondicionado");
+		}
+		return "";
+	}
+	//setters
+	
+		public void ponercolor (String colora)
+		{
+			color=colora;
+		}
+		
+		public void estableceraire1(String aire)
+		{
+			if(aire.equalsIgnoreCase("si"))
+			{
+				this.aire = true;
+			}
+			else
+			{
+				this.aire = false;
+			}
+		}
+		
+		public void establecerprimeraclase(String primeraclase)
+		{
+			if(primeraclase.equalsIgnoreCase("si"))
+			{
+				this.primeraclase = true;
+			}
+			else 
+			{
+				this.primeraclase = false;
+			}
+		}
+		
+		public void establecerwifi(String wifi)
+		{
+			if(wifi.equalsIgnoreCase("si"))
+			{
+				this.wifi = true;
+			}
+			else 
+			{
+				this.wifi = false;
+			}
+		}
+		
+		public void establecercomidas(String comidas)
+		{
+			if(comidas.equalsIgnoreCase("si"))
+			{
+				this.comidas = true;
+			}
+			else 
+			{
+				this.comidas = false;
+			}
+		}
+	
+	
+	}
+
+		}
+		
+		public void establecercomidas(String comidas)
+		{
+			if(comidas.equalsIgnoreCase("si"))
+			{
+				this.comidas = true;
+			}
+			else 
+			{
+				this.comidas = false;
+			}
+		}
+	
+	
+	}
